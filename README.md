@@ -119,22 +119,22 @@ dependencies:
 ### Onboarding Experience
 1. **Sync with Nature's Rhythm**  
    Experience peaceful morning transitions  
-   <img src="https://github.com/user-attachments/assets/4620060a-5efb-416c-974c-c354cfb0d262" alt="Onboarding Screen 1" width="200">
+   <img src="https://github.com/user-attachments/assets/e0062db6-78e7-43d5-b1b0-fca3de214928" alt="Onboarding Screen 2" width="200">
    
 2. **Effortless & Automatic**  
    Smart sunset time calculations  
-   <img src="https://github.com/user-attachments/assets/e0062db6-78e7-43d5-b1b0-fca3de214928" alt="Onboarding Screen 2" width="200">
    
+   <img src="https://github.com/user-attachments/assets/4620060a-5efb-416c-974c-c354cfb0d262" alt="Onboarding Screen 1" width="200">
 3. **Relax & Unwind**  
    Pursue your dreams with confidence  
-   <img src="https://github.com/user-attachments/assets/8e2633ab-99c0-469d-8c5b-3b1dd8d20de0" alt="Onboarding Screen 3" width="200">
 
+   <img src="https://github.com/user-attachments/assets/798f9510-eaf1-4123-a4e0-badf2665e87a" alt="Add Alarm Dialog" width="200">
 ### Location Setup & Main Features
 | Feature | Description | Screenshot |
 |---------|-------------|------------|
-| **Location Setup** | Permission request and location display | <img src="https://github.com/user-attachments/assets/0774de96-639c-4cbe-b269-6ab44f780e6d" alt="Location Screen" width="200"> |
-| **Home Screen** | Current location and alarm list | <img src="https://github.com/user-attachments/assets/4057ddb3-6ddb-422e-9768-82a7f834fd57" alt="Home Screen" width="200"> |
-| **Add Alarm** | Time picker for new alarms | <img src="https://github.com/user-attachments/assets/798f9510-eaf1-4123-a4e0-badf2665e87a" alt="Add Alarm Dialog" width="200"> |
+| **The front page** |  |<img src="https://github.com/user-attachments/assets/4057ddb3-6ddb-422e-9768-82a7f834fd57" alt="Home Screen" width="200">|
+| **Google maps permission** |  Permission request popup and processing | <img src="https://github.com/user-attachments/assets/0774de96-639c-4cbe-b269-6ab44f780e6d" alt="Location Screen" width="200"> |
+| **Add Alarm** | Current location and alarm list |   <img src="https://github.com/user-attachments/assets/8e2633ab-99c0-469d-8c5b-3b1dd8d20de0" alt="Onboarding Screen 3" width="200"> |
 
 ### Key Features
 - **Permission Request**: App requests location permissions gracefully
