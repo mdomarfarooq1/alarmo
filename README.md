@@ -1,20 +1,20 @@
 # Alarmo - Smart Sunset Alarm App
 A modern, location-based alarm application built with Flutter that syncs your alarms with sunset times based on your geographic location.
-✨ Features
+## ✨ Features
 🌅 Location-Based Alarms
 
 Sync alarms with sunset times based on your current location
 Automatic location detection with manual override option
 Real-time location updates for accurate sunset calculations
 
-🕐 Modern Alarm Management
+## 🕐 Modern Alarm Management
 
 Intuitive alarm creation with date and time pickers
 Toggle alarms on/off with visual switches
 Delete unwanted alarms with a simple tap
 Chronological sorting of alarms
 
-🎨 Beautiful UI/UX
+## 🎨 Beautiful UI/UX
 
 Dark theme with modern Material Design
 Smooth onboarding experience with engaging animations
@@ -22,14 +22,33 @@ Real-time clock display in the header
 Responsive design for all screen sizes
 Custom buttons and interactive elements
 
-📱 Smart Features
+## 📱 Smart Features
 
 Real-time date and time formatting
 Relative date display (Today, Tomorrow, etc.)
 High contrast date/time pickers for accessibility
 Smooth page transitions and animations
+## Folder Structure
+lib/
+├── common_widgets/
+│ └── custom_button.dart
+├── constants/
+│ └── app_constants.dart
+├── features/
+│ ├── home/
+│ │ ├── home_page.dart
+│ │ └── home_view_model.dart
+│ ├── location/
+│ │ └── location_page.dart
+│ └── onboarding/
+│ └── onboarding_page.dart
+├── helpers/
+│ └── date_formatter.dart
+├── networks/
+│ └── api_service.dart
+└── main.dart
 
-📱 Screenshots
+## 📱 Screenshots
 Onboarding Flow
 
 Page 1: Sync with Nature's Rhythm - Experience peaceful morning transitions
