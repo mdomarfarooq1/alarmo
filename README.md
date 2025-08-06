@@ -132,7 +132,7 @@ dependencies:
 ### Location Setup & Main Features
 | Feature | Description | Screenshot |
 |---------|-------------|------------|
-| **The front page** |  |<img src="https://github.com/user-attachments/assets/4057ddb3-6ddb-422e-9768-82a7f834fd57" alt="Home Screen" width="200">|
+| **The front page** | First page after onboardin transitions |<img src="https://github.com/user-attachments/assets/4057ddb3-6ddb-422e-9768-82a7f834fd57" alt="Home Screen" width="200">|
 | **Google maps permission** |  Permission request popup and processing | <img src="https://github.com/user-attachments/assets/0774de96-639c-4cbe-b269-6ab44f780e6d" alt="Location Screen" width="200"> |
 | **Add Alarm** | Current location and alarm list |   <img src="https://github.com/user-attachments/assets/8e2633ab-99c0-469d-8c5b-3b1dd8d20de0" alt="Onboarding Screen 3" width="200"> |
 
