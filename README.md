@@ -1,4 +1,4 @@
-# Alarmo - Smart Sunset Alarm App
+# Alarmo - Smart Alarm App
 
 A modern, location-based alarm application built with Flutter that syncs your alarms based on your geographic location.
 
