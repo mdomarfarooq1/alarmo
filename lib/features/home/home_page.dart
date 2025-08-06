@@ -86,6 +86,17 @@ class _HomePageState extends State<HomePage> {
   }
 
   @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    
+    // Get location from navigation arguments if available
+    final String? location = ModalRoute.of(context)?.settings.arguments as String?;
+    if (location != null) {
+      _viewModel.updateLocation(location);
+    }
+  }
+
+  @override
   void dispose() {
     // Cancel the timer when widget is disposed
     _timer.cancel();
@@ -103,27 +114,32 @@ class _HomePageState extends State<HomePage> {
         elevation: 0, // No shadow
         automaticallyImplyLeading: false, // Remove back button
         centerTitle: true, // Center the title
-        title: Column(
-          children: [
-            // Current time display - large and prominent
-            Text(
-              DateFormatter.formatTime(_currentDateTime),
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 28, // Large font for current time
-                fontWeight: FontWeight.bold,
+        toolbarHeight: 100, // Increase height to push content down
+        title: Padding(
+          padding: const EdgeInsets.only(top: 16), // Add top padding
+          child: Column(
+            children: [
+              // Current time display - large and prominent
+              Text(
+                DateFormatter.formatTime(_currentDateTime),
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 28, // Large font for current time
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-            ),
-            // Current date display - smaller below time
-            Text(
-              DateFormatter.formatDate(_currentDateTime),
-              style: const TextStyle(
-                color: Colors.white70, // Slightly muted color
-                fontSize: 14, // Smaller font for date
-                fontWeight: FontWeight.w400,
+              const SizedBox(height: 4), // Add space between time and date
+              // Current date display - smaller below time
+              Text(
+                DateFormatter.formatDate(_currentDateTime),
+                style: const TextStyle(
+                  color: Colors.white70, // Slightly muted color
+                  fontSize: 14, // Smaller font for date
+                  fontWeight: FontWeight.w400,
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
       body: Padding(
@@ -162,13 +178,18 @@ class _HomePageState extends State<HomePage> {
                       ),
                       const SizedBox(width: 8),
                       Expanded(
-                        child: Text(
-                          _viewModel.selectedLocation,
-                          style: const TextStyle(
-                            color: Colors.white70,
-                            fontSize: 14,
-                            height: 1.4,
-                          ),
+                        child: AnimatedBuilder(
+                          animation: _viewModel,
+                          builder: (context, child) {
+                            return Text(
+                              _viewModel.selectedLocation,
+                              style: const TextStyle(
+                                color: Colors.white70,
+                                fontSize: 14,
+                                height: 1.4,
+                              ),
+                            );
+                          },
                         ),
                       ),
                     ],

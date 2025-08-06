@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:alarmo/common_widgets/custom_button.dart';
+import 'package:alarmo/networks/api_service.dart';
 
-class LocationPage extends StatelessWidget {
+class LocationPage extends StatefulWidget {
   const LocationPage({super.key});
+
+  @override
+  State<LocationPage> createState() => _LocationPageState();
+}
+
+class _LocationPageState extends State<LocationPage> {
+  bool _isLoading = false;
 
   @override
   Widget build(BuildContext context) {
@@ -67,27 +75,71 @@ class LocationPage extends StatelessWidget {
               SizedBox(height: screenHeight * 0.06), // 6% of screen height
               
               // Primary location button with location icon - gray style
-              CustomButton.gray(
-                text: 'Use Current Location', // Button text
-                icon: Icons.location_on, // Location icon
-                // Navigate to home page when pressed
-                onPressed: () => Navigator.pushReplacementNamed(context, '/home'),
-              ),
+              _isLoading
+                  ? const Center(
+                      child: CircularProgressIndicator(
+                        color: Colors.white,
+                      ),
+                    )
+                  : CustomButton.gray(
+                      text: 'Use Current Location', // Button text
+                      icon: Icons.location_on, // Location icon
+                      onPressed: _fetchLocationAndNavigate,
+                    ),
               
               const SizedBox(height: 16), // Space between buttons
               
               // Secondary "Home" button - gray style
-              CustomButton.gray(
-                text: 'Home', // Button text
-                onPressed: () {
-                  // Navigate to home without setting location
-                  Navigator.pushReplacementNamed(context, '/home');
-                },
-              ),
+              if (!_isLoading)
+                CustomButton.gray(
+                  text: 'Home', // Button text
+                  onPressed: () {
+                    // Navigate to home without setting location
+                    Navigator.pushReplacementNamed(context, '/home');
+                  },
+                ),
             ],
           ),
         ),
       ),
     );
+  }
+
+  // Fetch location and navigate to home page
+  Future<void> _fetchLocationAndNavigate() async {
+    setState(() {
+      _isLoading = true;
+    });
+
+    try {
+      // Fetch current location using ApiService
+      String location = await ApiService.fetchLocation();
+      
+      // Navigate to home page with the fetched location
+      if (mounted) {
+        Navigator.pushReplacementNamed(
+          context, 
+          '/home',
+          arguments: location, // Pass location as argument
+        );
+      }
+    } catch (e) {
+      // Show error message to user
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('Error fetching location: ${e.toString()}'),
+            backgroundColor: Colors.red,
+            duration: const Duration(seconds: 3),
+          ),
+        );
+      }
+    } finally {
+      if (mounted) {
+        setState(() {
+          _isLoading = false;
+        });
+      }
+    }
   }
 }
