@@ -117,26 +117,31 @@ dependencies:
 ## 📱 User Flow
 
 ### Onboarding Experience
-1. **Page 1**: Sync with Nature's Rhythm - Experience peaceful morning transitions
-2. **Page 2**: Effortless & Automatic - Smart sunset time calculations
-3. **Page 3**: Relax & Unwind - Pursue your dreams with confidence
-<img width="1080" height="2400" alt="Screenshot_20250807_014122" src="https://github.com/user-attachments/assets/4620060a-5efb-416c-974c-c354cfb0d262" />
-<img width="1080" height="2400" alt="Screenshot_20250807_014016" src="https://github.com/user-attachments/assets/e0062db6-78e7-43d5-b1b0-fca3de214928" />
-<img width="1080" height="2400" alt="Screenshot_20250807_014352" src="https://github.com/user-attachments/assets/8e2633ab-99c0-469d-8c5b-3b1dd8d20de0" />
-<img width="1080" height="2400" alt="Screenshot_20250807_014328" src="https://github.com/user-attachments/assets/0774de96-639c-4cbe-b269-6ab44f780e6d" />
-<img width="1080" height="2400" alt="Screenshot_20250807_014312" src="https://github.com/user-attachments/assets/4057ddb3-6ddb-422e-9768-82a7f834fd57" />
-<img width="1080" height="2400" alt="Screenshot_20250807_014257" src="https://github.com/user-attachments/assets/798f9510-eaf1-4123-a4e0-badf2665e87a" />
+1. **Sync with Nature's Rhythm**  
+   Experience peaceful morning transitions  
+   <img src="https://github.com/user-attachments/assets/4620060a-5efb-416c-974c-c354cfb0d262" alt="Onboarding Screen 1" width="200">
+   
+2. **Effortless & Automatic**  
+   Smart sunset time calculations  
+   <img src="https://github.com/user-attachments/assets/e0062db6-78e7-43d5-b1b0-fca3de214928" alt="Onboarding Screen 2" width="200">
+   
+3. **Relax & Unwind**  
+   Pursue your dreams with confidence  
+   <img src="https://github.com/user-attachments/assets/8e2633ab-99c0-469d-8c5b-3b1dd8d20de0" alt="Onboarding Screen 3" width="200">
 
-### Location Setup
-1. **Permission Request**: App requests location permissions gracefully
-2. **GPS Detection**: Real-time coordinate fetching with loading indicator
-3. **Address Display**: Shows formatted address (street, city, country)
-4. **Error Handling**: Clear error messages for various failure scenarios
+### Location Setup & Main Features
+| Feature | Description | Screenshot |
+|---------|-------------|------------|
+| **Location Setup** | Permission request and location display | <img src="https://github.com/user-attachments/assets/0774de96-639c-4cbe-b269-6ab44f780e6d" alt="Location Screen" width="200"> |
+| **Home Screen** | Current location and alarm list | <img src="https://github.com/user-attachments/assets/4057ddb3-6ddb-422e-9768-82a7f834fd57" alt="Home Screen" width="200"> |
+| **Add Alarm** | Time picker for new alarms | <img src="https://github.com/user-attachments/assets/798f9510-eaf1-4123-a4e0-badf2665e87a" alt="Add Alarm Dialog" width="200"> |
 
-### Main Features
-- **Location Display**: Current location shown prominently on home screen
+### Key Features
+- **Permission Request**: App requests location permissions gracefully
+- **GPS Detection**: Real-time coordinate fetching with loading indicator
+- **Address Display**: Shows formatted address (street, city, country)
 - **Alarm Management**: Create, toggle, and delete alarms with modern UI
-- **Time Pickers**: Dark-themed, accessible date and time selection
+- **Time Pickers**: Dark-themed date/time selection
 - **Real-time Updates**: Live clock and reactive alarm states
 
 ## 🔧 Key Features Implementation
