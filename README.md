@@ -105,16 +105,13 @@ Run flutter run to launch the app
 Onboarding Experience
 
 Page 1: Sync with Nature's Rhythm - Experience peaceful morning transitions
-![521953764_3223619504456934_1562495276746015273_n](https://github.com/user-attachments/assets/cd979604-7671-4ffc-abac-a895af2f00f4)
-
-![522726274_594422377071653_1653802882344878074_n](https://github.com/user-attachments/assets/4634ae14-dc8f-4a9e-8d33-1fdc8ea82dfb)
 
 Page 2: Effortless & Automatic - Smart sunset time calculations
-![523914255_742042458686192_5940709742521309557_n](https://github.com/user-attachments/assets/24ec45b0-7859-4066-a771-5431b39ba97e)
+
 Page 3: Relax & Unwind - Pursue your dreams with confidence
-![523893026_9774609585973929_7546071124464723734_n](https://github.com/user-attachments/assets/0d6c0fb1-d4a6-46af-b4db-e4b64aac7a2e)
+
 Location Setup
-![522726274_594422377071653_1653802882344878074_n](https://github.com/user-attachments/assets/4634ae14-dc8f-4a9e-8d33-1fdc8ea82dfb)
+
 Permission Request: App requests location permissions gracefully
 GPS Detection: Real-time coordinate fetching with loading indicator
 Address Display: Shows formatted address (street, city, country)
